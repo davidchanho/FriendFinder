@@ -1,3 +1,5 @@
+//TODO: gets user information from form instead of user test array.
+
 //test array
 var friends = [
 	{
@@ -21,8 +23,7 @@ var friends = [
 ];
 
 //test user
-//TODO: gets information from form instead.
-var user = {
+var userTest = {
 	name: 'david',
 	photo:
 		'https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg',
@@ -34,10 +35,9 @@ function total(sum, element) {
 	return (sum += element);
 }
 
-var userScore = user.scores.reduce(total); // used to get total user's score
+var userScore = userTest.scores.reduce(total); // used to get total user's score
 
 // totals friends score and added to scoreTotal array
-
 var scoreTotal = [];
 
 function scoreTotaler() {

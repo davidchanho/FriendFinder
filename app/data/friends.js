@@ -1,3 +1,4 @@
+//test array
 var friends = [
 	{
 		name: 'Ahmed',
@@ -19,6 +20,8 @@ var friends = [
 	}
 ];
 
+//test user
+//TODO: gets information from form instead.
 var user = {
 	name: 'david',
 	photo:
@@ -26,29 +29,32 @@ var user = {
 	scores: [1, 1, 4, 4, 3, 1, 2, 4, 4, 1]
 };
 
-function total(a, b) {
-	return (a += b);
+// take an array and total up each element
+function total(sum, element) {
+	return (sum += element);
 }
 
-function difference(a, b) {
-	return Math.abs(a - b);
-}
+var userScore = user.scores.reduce(total); // used to get total user's score
 
-function min() {
-	return Math.min(...diff);
-}
-
-var userScore = user.scores.reduce(total);
+// totals friends score and added to scoreTotal array
 
 var scoreTotal = [];
 
 function scoreTotaler() {
 	for (let i = 0; i < friends.length; i++) {
-		scoreTotal.push(friends[i].scores.reduce(total));
+		var score = friends[i].scores;
+		scoreTotal.push(score.reduce(total));
 	}
 }
 
+//finds the difference between two numbers
+function difference(num1, num2) {
+	return Math.abs(num1 - num2);
+}
+
+// substracts each friends' scores with user score
 var diff = [];
+
 function diffFunct() {
 	scoreTotaler();
 
@@ -58,10 +64,16 @@ function diffFunct() {
 	}
 }
 
-function minimizer() {
+// take an array in finds the lowest number
+function lowestNum(arr) {
+	return Math.min(...arr); // three periods are needed to use Math.min() with an array
+}
+
+// compares the lowest score difference between friend and user
+function friendMatch() {
 	diffFunct();
 
-	var minimize = min();
+	var minimize = lowestNum(diff);
 
 	for (let i = 0; i < friends.length; i++) {
 		if (diff[i] === minimize) {
@@ -71,4 +83,4 @@ function minimizer() {
 	}
 }
 
-minimizer();
+friendMatch();

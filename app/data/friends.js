@@ -10,13 +10,13 @@ var friends = [
 		scores: [5, 1, 4, 4, 5, 1, 2, 5, 4, 1]
 	},
 	{
-		name: 'bob',
+		name: 'Bob',
 		photo:
 			'https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg',
 		scores: [2, 1, 3, 4, 4, 1, 2, 1, 4, 1]
 	},
 	{
-		name: 'steve',
+		name: 'Steve',
 		photo:
 			'https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg',
 		scores: [1, 1, 4, 4, 3, 1, 2, 4, 4, 1]
@@ -25,7 +25,7 @@ var friends = [
 
 //test user
 var userTest = {
-	name: 'david',
+	name: 'David',
 	photo:
 		'https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg',
 	scores: [1, 1, 4, 4, 3, 1, 2, 4, 4, 1]
@@ -75,7 +75,7 @@ function highestNum(arr) {
 	return Math.max(...arr);
 }
 
-// compares the lowest score difference between friend and user
+// compares the lowest difference between friend and user
 function friendMatch() {
 	diffFunct();
 
@@ -84,11 +84,12 @@ function friendMatch() {
 	for (let i = 0; i < friends.length; i++) {
 		if (diff[i] === minimize) {
 			var matched = friends[i].name;
-			console.log(matched);
+			console.log('Meet your new best friend!', matched);
 		}
 	}
 }
 
+// compares the largest difference between friend and user
 function fiendMatch() {
 	diffFunct();
 
@@ -97,7 +98,10 @@ function fiendMatch() {
 	for (let i = 0; i < friends.length; i++) {
 		if (diff[i] === maximum) {
 			var mismatched = friends[i].name;
-			console.log(mismatched);
+			console.log('Avoid them at all cost!', mismatched);
 		}
 	}
 }
+
+friendMatch();
+fiendMatch();

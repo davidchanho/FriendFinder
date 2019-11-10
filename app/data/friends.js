@@ -1,4 +1,5 @@
 //TODO: gets user information from form instead of user test array.
+// refactor and use es6
 
 //test array
 var friends = [
@@ -69,6 +70,11 @@ function lowestNum(arr) {
 	return Math.min(...arr); // three periods are needed to use Math.min() with an array
 }
 
+// take an array in finds the highest number
+function highestNum(arr) {
+	return Math.max(...arr);
+}
+
 // compares the lowest score difference between friend and user
 function friendMatch() {
 	diffFunct();
@@ -83,4 +89,15 @@ function friendMatch() {
 	}
 }
 
-friendMatch();
+function fiendMatch() {
+	diffFunct();
+
+	var maximum = highestNum(diff);
+
+	for (let i = 0; i < friends.length; i++) {
+		if (diff[i] === maximum) {
+			var mismatched = friends[i].name;
+			console.log(mismatched);
+		}
+	}
+}

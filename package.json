@@ -1,0 +1,26 @@
+{
+  "name": "friendfinder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidchanho/FriendFinder.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davidchanho/FriendFinder/issues"
+  },
+  "homepage": "https://github.com/davidchanho/FriendFinder#readme",
+  "dependencies": {
+    "babel": "^6.23.0",
+    "bootstrap": "^4.3.1",
+    "express": "^4.17.1",
+    "nodemon": "^1.19.4"
+  }
+}

@@ -5,26 +5,37 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 		<title>home</title>
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
+		/>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="../assets/css/styles.css" />
 	</head>
 	<body>
 		<header class="jumbotron jumbotron-fluid">
 			<div class="container">
-				<h1 class="display-3">Fluid jumbo heading</h1>
-				<p class="lead">Jumbo helper text</p>
-				<hr class="my-2" />
-				<p>More info</p>
-				<p class="lead">
-					<a
-						class="btn btn-primary btn-lg"
-						href="Jumbo action link"
-						role="button"
-						>Jumbo action name</a
-					>
-				</p>
+				<h1 class="display-3">Finder</h1>
+				<p class="lead">Take the survey to find your next Friend™ and Foe™!</p>
 			</div>
 		</header>
-		<main></main>
+		<main style="width:50%; margin:0 auto">
+			<div id='intro'></div>
 
-		<footer></footer>
+			<a href="/survey" class="btn btn-lg btn-primary"
+				><button type="button" class="btn btn-primary" id="Survey">
+					Take the Survey!
+				</button></a
+			>
+		</main>
+		<footer
+			class="footer"
+			style="position:fixed; left:0; bottom:0; width:100%; text-align:center;background-color:grey"
+		>
+			<a href="/api/friends">API Friends Link</a>
+		</footer>
 	</body>
+	<script src="./assets/js/intro.js"></script>
 </html>
